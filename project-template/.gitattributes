@@ -1,0 +1,37 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Force LF line endings for web files (consistent across Windows/Mac)
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Prevent binary corruption
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
+
+# Mark generated files (excluded from GitHub language stats)
+package-lock.json linguist-generated=true
+pnpm-lock.yaml linguist-generated=true
+yarn.lock linguist-generated=true
+
+# Lock file merge strategy
+package-lock.json merge=ours
+pnpm-lock.yaml merge=ours
+yarn.lock merge=ours

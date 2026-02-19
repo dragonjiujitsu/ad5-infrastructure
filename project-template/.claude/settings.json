@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATHS\" | grep -qE '\\.(ts|tsx)$'; then npx tsc --noEmit --skipLibCheck 2>&1 | head -20 || echo '⚠️ TypeScript errors detected'; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
