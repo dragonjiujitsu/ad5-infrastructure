@@ -2,7 +2,7 @@
 
 Repeatable project standards for every AD-5 repo. Install once, apply everywhere.
 
-v1.2.0
+v1.3.0
 
 ## The Problem
 
@@ -58,8 +58,9 @@ Source: https://code.claude.com/docs/en/memory and https://www.anthropic.com/eng
 | File | Purpose |
 |------|---------|
 | `brand_dna.md` | Brand DNA specification template. Copy into client project repos. Serves as both human documentation and LLM evaluation rubric for image generation quality and brand compliance. |
+| `project_spec.md` | Project specification template. Copy into client project repos. Defines the full product: scope, data model, behavioral scenarios, boundary rules, UI/output spec, and acceptance checklist. Companion to brand_dna.md for visual production projects. |
 
-This file is copied manually into client projects that involve visual production. It is not part of the automatic `/new-project` scaffold.
+These files are copied manually into client projects. They are not part of the automatic `/new-project` scaffold.
 
 ## Installation
 
