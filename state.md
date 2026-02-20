@@ -1,12 +1,12 @@
 # Project State
 
 ## Current Version
-v1.1.0
+v1.2.0
 
 ## Last Update
-- **Date:** 2026-02-18
-- **Commit:** feat: initial AD-5 project infrastructure
-- **Summary:** Created complete repeatable infrastructure for AD-5 Creative projects. Two-layer system: global standards installed to ~/.claude/ (all projects), project template copied into each new repo.
+- **Date:** 2026-02-20
+- **Commit:** feat: add brand_dna.md template, document CLAUDE.md convention, add Python line endings
+- **Summary:** Added brand_dna.md template for client visual production standards, documented root CLAUDE.md convention in README, added Python line ending normalization to .gitattributes template.
 
 ## Completed
 - [x] Global CLAUDE.md with AD-5 standards (security, TypeScript, Next.js, versioning, commit messages, workflow)
@@ -16,6 +16,10 @@ v1.1.0
 - [x] README.md with installation instructions for Windows and Mac
 - [x] Pushed to dragonjiujitsu/ad5-infrastructure (public repo)
 - [x] Installed global files to ~/.claude/ on Windows machine
+- [x] Added brand_dna.md template for client visual production standards (Layer 3)
+- [x] Added *.py text eol=lf to project-template/.gitattributes
+- [x] Documented Root CLAUDE.md Convention in README.md
+- [x] Documented Layer 3: Client Production Standards in README.md
 
 ## In Progress
 - [ ] Install global files to ~/.claude/ on Mac machine
@@ -37,7 +41,8 @@ v1.1.0
 - Global settings.json hook format may need adjustment. Anthropic docs show hooks nested under event names, but exact schema should be verified against Claude Code's current version.
 
 ## File Manifest
-- `README.md` - Installation instructions, architecture explanation, reference links (v1.1.0)
+- `README.md` - Installation instructions, architecture explanation, reference links (v1.2.0)
+- `brand_dna.md` - Brand DNA specification template for client visual production projects (copy manually into client repos)
 - `state.md` - This file; project state tracking
 - `global-claude/CLAUDE.md` - AD-5 global standards (installs to ~/.claude/CLAUDE.md)
 - `global-claude/settings.json` - Global hooks (installs to ~/.claude/settings.json)

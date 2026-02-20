@@ -2,7 +2,7 @@
 
 Repeatable project standards for every AD-5 repo. Install once, apply everywhere.
 
-v1.1.0
+v1.2.0
 
 ## The Problem
 
@@ -52,6 +52,14 @@ Source: https://code.claude.com/docs/en/memory and https://www.anthropic.com/eng
 | `project-template/.gitignore` | Security entries for keys, env files, service accounts |
 | `project-template/.gitattributes` | Line ending normalization, linguist overrides |
 | `project-template/.env.example` | Environment variable template |
+
+### Layer 3: Client Production Standards
+
+| File | Purpose |
+|------|---------|
+| `brand_dna.md` | Brand DNA specification template. Copy into client project repos. Serves as both human documentation and LLM evaluation rubric for image generation quality and brand compliance. |
+
+This file is copied manually into client projects that involve visual production. It is not part of the automatic `/new-project` scaffold.
 
 ## Installation
 
@@ -115,6 +123,16 @@ When AD-5 standards evolve, update the files in this repo, then re-run the insta
 - Hooks are for deterministic enforcement (formatting, type checks, reminders). They fire regardless of what the model decides.
 - Slash commands are for repeatable workflows. Natural language in .md files with `$ARGUMENTS` for parameters.
 - CLAUDE.local.md is auto-gitignored. Use it for personal sandbox URLs, test data, machine-specific paths.
+
+## Root CLAUDE.md Convention
+
+Claude Code loads both `project/CLAUDE.md` (root) and `project/.claude/CLAUDE.md` automatically. If both exist, they are merged — you do not have to choose one or the other.
+
+- **`.claude/CLAUDE.md`** is the concise project-layer summary from the template. Customize it per project with tech stack, phases, and project-specific rules.
+- **Root `CLAUDE.md`** is for detailed, project-specific specs — API patterns, data types, implementation notes, architecture decisions — that would bloat the `.claude/CLAUDE.md` file.
+- **Root CLAUDE.md should NEVER be a copy of `~/.claude/CLAUDE.md`.** Global standards load automatically. Duplicating them wastes context tokens and creates drift when one copy is updated but the other isn't.
+- If a repo only needs one project-level file, **`.claude/CLAUDE.md` is preferred** (matches the template structure).
+- If a repo needs extensive project documentation, **use both**: `.claude/CLAUDE.md` for the summary, root `CLAUDE.md` for the full spec.
 
 ## References
 
