@@ -35,7 +35,7 @@
 
 ## Security (NON-NEGOTIABLE)
 - NEVER hardcode API keys, tokens, or secrets
-- Use environment variables via `.env.local`
+- Use environment variables via `.env`
 - Server-only keys: no `NEXT_PUBLIC_` prefix
 - `.gitignore` MUST include: `.env`, `.env.local`, `.env.*.local`, `*.pem`, `*.key`, `service-account*.json`
 
